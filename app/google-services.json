@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "970759856897",
+    "project_id": "cloydcontact",
+    "storage_bucket": "cloydcontact.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970759856897:android:489c925f19f3cd5b15f100",
+        "android_client_info": {
+          "package_name": "com.codeseyee.cloydcontact"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOv82uTQbftnFpBXCZP8PNrAvZDEuatgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

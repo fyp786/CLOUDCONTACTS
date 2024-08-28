@@ -1,0 +1,162 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <attr name="homeToolbarColor"/>
+    <style name="Theme.App" parent="Theme.MaterialComponents.DayNight">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="homeToolbarColor">?attr/colorSurface</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/accent_color</item>
+        <item name="colorSecondaryVariant">@color/accent_color</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:colorButtonNormal">@color/black</item>
+        <item name="android:colorControlNormal">@color/black</item>
+        <item name="materialButtonStyle">@style/MaterialButtonStyle</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="hintstyle">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
+
+    <style name="MaterialTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxCornerRadiusBottomEnd">34dp</item>
+        <item name="boxCornerRadiusBottomStart">34dp</item>
+        <item name="boxCornerRadiusTopEnd">34dp</item>
+        <item name="boxCornerRadiusTopStart">34dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="startIconTint">@color/signin_edittext_color</item>
+        <item name="passwordToggleTint">@color/signin_edittext_color</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="boxStrokeColor">@color/textinputlayout_outline</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="errorTextColor">@android:color/holo_red_light</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="hintTextColor">@color/textinputlayout_outline</item>
+        <item name="boxBackgroundColor">#E6E6E6</item>
+    </style>
+
+    <style name="TextInputEdittextTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:textColor">@color/signin_edittext_color</item>
+        <item name="android:textColorHint">#8E8E8E</item>
+        <item name="android:inputType">text</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <style name="TextViewLabelTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginLeft">23dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+
+    <style name="Theme.App.NoActionBar" parent="Theme.App">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+    </style>
+
+    <style name="Theme.App.NoActionBar.SplashScreen" parent="Theme.App">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:navigationBarColor">@color/splash_screen_color</item>
+        <item name="android:statusBarColor">@color/splash_screen_color</item>
+    </style>
+
+    <style name="Theme.App.NoActionBar.LoginScreen" parent="Theme.App">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:navigationBarColor">#293D48</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
+        <item name="android:statusBarColor">#293D48</item>
+    </style>
+
+    <style name="MainActionBarStyle" parent="Theme.App">
+        <item name="android:textColorPrimary">?attr/colorOnSurface</item>
+        <item name="android:textColorSecondary">?attr/colorOnSurface</item>
+        <item name="android:actionMenuTextColor">?attr/colorOnSurface</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="drawerArrowStyle">@style/DrawerStyle</item>
+    </style>
+
+    <style name="DrawerStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">?attr/colorOnSurface</item>
+        <item name="android:textColorPrimary">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="ImageCircleTheme">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="MaterialButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/accent_color</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.App.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"></style>
+
+    <style name="Theme.App.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">12dp</item>
+        <item name="cornerSizeBottomLeft">12dp</item>
+    </style>
+    <style name="CustomCardViewStyle2" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners2</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners2" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">10dp</item>
+        <item name="cornerSizeTopLeft">10dp</item>
+        <item name="cornerSizeBottomRight">10dp</item>
+        <item name="cornerSizeBottomLeft">10dp</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/Alert.Button.Positive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Alert.Button.Positive</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Alert.Button.Positive</item>
+    </style>
+
+    <style name="Alert.Button.Positive" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="rippleColor">@color/accent_color</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>

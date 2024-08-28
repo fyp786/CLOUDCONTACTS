@@ -1,0 +1,34 @@
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="grey">#333333</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="golden">#daa520</color>
+    <color name="featured">#EF5656</color>
+    <color name="verified">#03DC5D</color>
+    <color name="icon_tint">#5598DC</color>
+    <color name="accent_color">#5598DC</color>
+    <color name="delete_color">#EF5656</color>
+    <color name="selected_Contact_bg">#6A5598DC</color>
+    <color name="open_color">#00863D</color>
+    <color name="closed_color">#B00D23</color>
+    <color name="always_open_color">#F3C81F</color>
+    <color name="pinned_color">#5598DC</color>
+    <color name="un_pinned_color">#BDBDBD</color>
+    <color name="splash_screen_color">#091E39</color>
+    <color name="signin_edittext_color">#353535</color>
+    <color name="dark_background">#202125</color>
+    <color name="dark_surface">#323337</color>
+    <color name="dark_on_surface">#F4F4F4</color>
+    <color name="dark_on_background">#B7B8BA</color>
+    <color name="business_dark">#EF5656</color>
+    <color name="business_light">#68F4ADAD</color>
+    <!-- Add this if not present -->
+    <color name="primary_color">#007BFF</color>
+
+
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+</resources>
