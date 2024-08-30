@@ -30,7 +30,7 @@
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:layout_gravity="top|end"
-                android:src="@drawable/placeholder" />
+                android:src="@drawable/verified" />
         </FrameLayout>
 
         <!-- User Details -->

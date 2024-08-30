@@ -31,9 +31,15 @@ class LoginActivity : AppCompatActivity() {
         }
 
         viewModel.loginResult.observe(this) { result ->
-            Toast.makeText(this, result, Toast.LENGTH_SHORT).show()
-            if (result == "Login successful") {
-                startActivity(Intent(this, MainActivity::class.java))
+            val message = result.first
+            val userId = result.second
+
+            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
+            if (message == "Login successful" && userId != null) {
+                val intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("USER_ID", userId)
+                startActivity(intent)
                 finish()
             }
         }

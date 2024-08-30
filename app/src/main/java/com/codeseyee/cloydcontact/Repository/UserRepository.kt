@@ -10,6 +10,6 @@ class UserRepository(private val sharedPreferences: SharedPreferences) {
         val name = sharedPreferences.getString("userName", "Default User") ?: "Default User"
         val email = sharedPreferences.getString("userEmail", "default@example.com") ?: "default@example.com"
 
-        return User(id, name, email)
+        return User(id.toString(), name, email)
     }
 }

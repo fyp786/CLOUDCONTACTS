@@ -80,6 +80,10 @@ dependencies {
     implementation("com.fasterxml.jackson.core:jackson-databind:2.15.0")
     implementation("com.fasterxml.jackson.core:jackson-annotations:2.15.0")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+
+
+    implementation ("com.github.bumptech.glide:glide:4.13.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.13.0")
 }
 
 

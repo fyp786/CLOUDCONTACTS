@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "users")
 data class User(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    @PrimaryKey val id: String = "",  // Change to String
     val email: String = "",
     val phone: String = "",
     val name: String = "",
@@ -14,5 +14,7 @@ data class User(
     val profileImageUrl: String = "",
     val accountType: String = "",
     val isSynced: Boolean = false,
-    val lastUpdatedAt: Long = 0
+    val lastUpdatedAt: Long = 0,
+    val role: String = "",
+    val department: String = ""
 )
