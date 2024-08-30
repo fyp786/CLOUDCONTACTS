@@ -24,6 +24,8 @@
     <dimen name="_3ssp">3dp</dimen>
     <dimen name="_11ssp">11sp</dimen>
     <dimen name="_12ssp">12sp</dimen>
+    <dimen name="_14ssp">14sp</dimen>
+    <dimen name="_16ssp">16sp</dimen>
     <dimen name="_17sdp">17dp</dimen>
     <dimen name="_24ssp">24sp</dimen>
 
