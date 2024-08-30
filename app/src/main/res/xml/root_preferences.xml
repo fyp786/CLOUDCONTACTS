@@ -1,0 +1,20 @@
+
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference  android:title="Edit profile" android:key="profile" android:icon="@drawable/ic_baseline_person_24" app:allowDividerBelow="true"/>
+    <Preference  android:title="Change Password" android:key="changePassword" android:icon="@drawable/ic_baseline_vpn_key_24" app:allowDividerBelow="true"/>
+    <Preference  android:title="Logout" android:key="logout" android:icon="@drawable/ic_baseline_power_settings_new_24" app:allowDividerBelow="true"/>
+    <Preference
+        android:icon="@drawable/ic_baseline_do_disturb_on_24"
+        android:key="deactive"
+        android:title="Deactivate account"
+        app:allowDividerBelow="true" />
+    <Preference
+        android:icon="@drawable/ic_baseline_delete_24"
+        android:key="delete"
+        android:title="Delete account permanently"
+        app:allowDividerBelow="true" />
+
+
+</PreferenceScreen>

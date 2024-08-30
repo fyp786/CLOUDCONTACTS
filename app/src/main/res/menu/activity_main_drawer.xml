@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_contact_card"
+            android:icon="@drawable/ic_baseline_call_24"
+            android:visible="false"
+            android:title="Contact Cards" />
+
+
+    </group>
+
+    <item
+        android:title="Support">
+        <menu>
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/ic_baseline_email_24"
+                android:title="Send Feedback" />
+            <item
+                android:id="@+id/nav_tell_friend"
+                android:icon="@drawable/ic_baseline_connect_without_contact_24"
+                android:title="Tell a Friend" />
+            <item
+                android:id="@+id/nav_rate_us"
+                android:icon="@drawable/ic_baseline_star_24"
+                android:title="Rate us on PlayStore" />
+
+        </menu>
+    </item>
+    <item
+        android:title="Options">
+        <menu>
+            <item
+                android:id="@+id/nav_dark_mode"
+                android:icon="@drawable/ic_baseline_dark_mode_24"
+                android:title="Dark Mode" />
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_baseline_settings_24"
+                android:title="Settings" />
+            <item
+                android:id="@+id/nav_logout"
+                android:visible="false"
+                android:icon="@android:drawable/ic_lock_power_off"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>
