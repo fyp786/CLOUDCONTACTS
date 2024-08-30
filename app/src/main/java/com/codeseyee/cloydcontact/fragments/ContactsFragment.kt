@@ -16,6 +16,14 @@ class ContactsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentContactsBinding.inflate(inflater, container, false)
+
+        // Hide the progress bar if not needed
+        binding.progressBar2.visibility = View.GONE
+
+        // Ensure that other UI components are displayed as intended
+        binding.recyclerView.visibility = View.VISIBLE
+        binding.searchView.visibility = View.VISIBLE
+
         return binding.root
     }
 }

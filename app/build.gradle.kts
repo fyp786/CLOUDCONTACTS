@@ -55,6 +55,7 @@ dependencies {
 
     // Room dependencies
     implementation("androidx.room:room-runtime:2.5.2")
+    implementation(libs.androidx.room.common)
     kapt("androidx.room:room-compiler:2.5.2") // Use kapt for Kotlin projects
     implementation("androidx.room:room-ktx:2.5.2")
     kapt("androidx.room:room-compiler:2.6.0")
