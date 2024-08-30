@@ -1,30 +1,27 @@
 package com.codeseyee.cloydcontact
 
-
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.activity.viewModels
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import com.codeseyee.cloydcontact.Repository.ContactRepository
 import com.codeseyee.cloydcontact.fragments.ContactsFragment
 import com.codeseyee.cloydcontact.fragments.FavouriteFragment
 import com.codeseyee.cloydcontact.fragments.MainFragment
 import com.codeseyee.cloydcontact.fragments.NearByFragment
 import com.codeseyee.cloydcontact.ViewModel.MainViewModel
-import com.codeseyee.cloydcontact.factories.MainViewModelFactory
-import com.codeseyee.cloydcontact.room.AppDatabase
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    private val viewModel: MainViewModel by viewModels {
-        MainViewModelFactory(ContactRepository(AppDatabase.getDatabase(this).contactDao()))
-    }
+    private val viewModel: MainViewModel by viewModels()
     private lateinit var bottomNav: BottomNavigationView
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var toggle: ActionBarDrawerToggle
     private val fragmentList: List<Fragment> = listOf(
         ContactsFragment(),
         FavouriteFragment(),
@@ -37,6 +34,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
 
         bottomNav = findViewById(R.id.idbottom_nav)
+        drawerLayout = findViewById(R.id.drawer_layout)
+        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.idbottomhome -> selectTab(0)
@@ -48,8 +52,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         bottomNav.selectedItemId = R.id.idbottomhome
 
-        viewModel.loadContacts()
-        viewModel.deleteOldContacts()
+        observeViewModel()
+    }
+
+    private fun observeViewModel() {
+        viewModel.selectedFragmentIndex.observe(this) { index ->
+            selectTab(index)
+        }
     }
 
     private fun selectTab(index: Int) {
@@ -58,18 +67,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             .commit()
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return if (toggle.onOptionsItemSelected(item)) {
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
+    }
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // Handle navigation view item clicks
         when (item.itemId) {
             R.id.nav_logout -> logout()
             R.id.nav_setting -> startActivity(Intent(this, SettingsActivity::class.java))
-            // Handle other navigation items
         }
-        findViewById<DrawerLayout>(R.id.drawer_layout).closeDrawers()
+        drawerLayout.closeDrawers()
         return true
     }
 
     private fun logout() {
-        // Handle logout
     }
 }

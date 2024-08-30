@@ -11,6 +11,10 @@
     <string name="sign_in_button_desc">Sign In Button</string>
     <string name="confirm_password_description">Field for confirming your password</string>
 
+        <string name="navigation_drawer_open">Open navigation drawer</string>
+        <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
     <string-array name="dp_colors">
         <item>#FF4635</item>
         <item>#BF29FF</item>

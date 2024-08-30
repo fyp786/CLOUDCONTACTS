@@ -7,9 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import com.codeseyee.cloudcontacts.viewmodels.SettingsViewModel
-import com.codeseyee.cloydcontact.utils.AppUtils
-import com.codeseyee.cloydcontact.utils.PreferenceManager
+import com.codeseyee.cloydcontact.viewmodels.SettingsViewModel
 
 class SettingsActivity : AppCompatActivity() {
 
@@ -45,48 +43,21 @@ class SettingsActivity : AppCompatActivity() {
 
             viewModel = ViewModelProvider(requireActivity()).get(SettingsViewModel::class.java)
 
-            findPreference<Preference>("profile")?.setOnPreferenceClickListener {
-                AppUtils.launchProfileEditActivity(requireContext())
-                true
-            }
-
-//            findPreference<Preference>("changePassword")?.let { changePasswordPref ->
-//                val currentAuthProvider = PreferenceManager.getCurrentUser()?.authProvider
-//                if (currentAuthProvider != "email") {
-//                    changePasswordPref.isVisible = false
-//                }
-//            }
-
-            findPreference<Preference>("deactive")?.setOnPreferenceClickListener {
-                AppUtils.showYesNoDialog(
-                    requireContext(),
-                    "Sure to deactivate?",
-                    "Are you sure you want to deactivate your account? You can login again to activate your account."
-                ) {
-                    viewModel.deactivateAccount()
-                }
+            findPreference<Preference>("deactivate")?.setOnPreferenceClickListener {
+                // Implement your deactivate account logic here
+                viewModel.deactivateAccount()
                 true
             }
 
             findPreference<Preference>("delete")?.setOnPreferenceClickListener {
-                AppUtils.showYesNoDialog(
-                    requireContext(),
-                    "Sure to delete?",
-                    "Are you sure you want to delete your account?"
-                ) {
-                    startActivity(Intent(requireContext(), DeletePermanentlyActivity::class.java))
-                }
+                // Implement your delete account logic here
+                startActivity(Intent(requireContext(), DeletePermanentlyActivity::class.java))
                 true
             }
 
             findPreference<Preference>("logout")?.setOnPreferenceClickListener {
-                AppUtils.showYesNoDialog(
-                    requireContext(),
-                    "Sure to logout?",
-                    "Are you sure you want to logout?"
-                ) {
-                    viewModel.logout()
-                }
+                // Implement your logout logic here
+                viewModel.logout()
                 true
             }
         }
